@@ -28,11 +28,11 @@ Dark green: #28b485
 @keyframes moveinTop {
   0% {
     opacity: 0;
-    transform: translateY(-130px) rotate(180deg) scaleX(-1);
+    transform: translateY(-13rem) rotate(180deg) scaleX(-1);
   }
 
   80% {
-    transform: translateY(38px) rotate(180deg) scaleX(-1);
+    transform: translateY(3.8rem) rotate(180deg) scaleX(-1);
   }
 
   100% {
@@ -44,11 +44,11 @@ Dark green: #28b485
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-135px);
+    transform: translateX(-13.5rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -60,11 +60,11 @@ Dark green: #28b485
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(135px);
+    transform: translateX(13.5rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -76,7 +76,7 @@ Dark green: #28b485
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -87,13 +87,17 @@ Dark green: #28b485
 
 /* CSS  */
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -112,12 +116,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .text-box {
@@ -132,33 +136,33 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
-  animation: 1.2s moveinTop cubic-bezier(0.37, 0, 0.63, 1) 6s;
+  animation: 1.2s moveinTop cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .heading-primary-sub-left {
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
-  animation: moveInLeft 1.2s cubic-bezier(0.37, 0, 0.63, 1) 6s;
+  letter-spacing: 1.75rem;
+  animation: moveInLeft 1.2s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .heading-primary-sub-right {
   display: inline-block;
-  margin-left: 15px;
-  font-size: 20px;
+  margin-left: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
-  animation: moveInRight 1.2s cubic-bezier(0.37, 0, 0.63, 1) 6s;
+  letter-spacing: 1.75rem;
+  animation: moveInRight 1.2s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .btn:link,
@@ -166,20 +170,20 @@ body {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
-  border-radius: 100px;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
 
 .btn-white {
@@ -188,7 +192,7 @@ body {
 }
 
 .btn-animated {
-  animation: 0.5s moveInBottom cubic-bezier(0.37, 0, 0.63, 1) 6.75s;
+  animation: 0.5s moveInBottom cubic-bezier(0.37, 0, 0.63, 1) 0.75s;
   animation-fill-mode: backwards;
 }
 
@@ -197,7 +201,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
