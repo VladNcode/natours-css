@@ -1,3 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @-webkit-keyframes moveinTop {
   0% {
     opacity: 0;
@@ -170,6 +193,34 @@ body {
           animation: moveInRight 1.2s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.heading-secondary:hover {
+  -webkit-transform: skewY(-0.5deg) skewX(2deg) scale(1.1);
+          transform: skewY(-0.5deg) skewX(2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
 .btn::after {
   content: '';
   display: inline-block;
@@ -231,6 +282,12 @@ body {
           animation-fill-mode: backwards;
 }
 
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -261,26 +318,50 @@ body {
   text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
 }
 
-*::after, *::before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+.row:not(:last-child) {
+  margin-bottom: 8rem;
 }
 
-html {
-  font-size: 62.5%;
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.row [class^="col-"] {
+  float: left;
+}
+
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 6rem * 2) / 3);
+}
+
+.row .col-2-of-3 {
+  width: calc(((100% - 6rem * 2) / 3) * 2 + 6rem);
+}
+
+.row .col-1-of-4 {
+  width: calc(((100% - 6rem * 3) / 4));
+}
+
+.row .col-2-of-4 {
+  width: calc((((100% - 6rem * 3) / 4) * 2 + 6rem));
+}
+
+.row .col-3-of-4 {
+  width: calc((((100% - 6rem * 3) / 4) * 3 + (6rem * 2)));
 }
 /*# sourceMappingURL=style.css.map */
