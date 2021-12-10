@@ -337,30 +337,38 @@ body {
 
 .composition__photo {
   position: absolute;
-  width: 55%;
+  width: 60%;
   -webkit-box-shadow: 0 1.5rem 4rem 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 1.5rem 4rem 0 rgba(0, 0, 0, 0.4);
   border-radius: 2px;
   -webkit-transition: all .2s;
   transition: all .2s;
-  outline-offset: 2rem;
+  outline-offset: 1rem;
 }
 
 .composition__photo--p1 {
   top: -2rem;
+  -webkit-transform: rotate(355deg);
+          transform: rotate(355deg);
+  border: 1.2rem solid #f7f7f7;
 }
 
 .composition__photo--p2 {
   right: 0;
   top: 2rem;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  border: 1.2rem solid #f7f7f7;
 }
 
 .composition__photo--p3 {
   left: 11rem;
   top: 10rem;
+  border: 1.2rem solid #f7f7f7;
 }
 
 .composition__photo:hover {
+  border: none;
   outline: 1.5rem solid #55c57a;
   -webkit-transform: scale(1.1) translateY(-0.5rem);
           transform: scale(1.1) translateY(-0.5rem);
