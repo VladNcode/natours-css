@@ -1,15 +1,17 @@
-const hello = 'Hello world!';
+const a = document.querySelector('iframe').contentDocument;
 
-console.log(hello);
-console.log('Suh dude');
+let area = localStorage.getItem('area');
+a.body.children[0].innerText = area;
 
-console.log(10 + 30);
-
-const hide = document.querySelector(".hideme");
-const btn = document.querySelector(".btn");
-hide.style.opacity = "1";
-
-btn.addEventListener("click", () => {
-  if (hide.style.opacity === "1") hide.style.opacity = "0";
-  else hide.style.opacity = "1";
+a.addEventListener('keydown', () => {
+  localStorage.setItem('area', a.body.children[0].innerText);
 });
+
+// const b = document.querySelector(".js-filter-guidelines")
+// const btnClearSave = document.createElement("BUTTON");
+// btnClearSave.innerHTML = "CLEAR AUTO SAVE";
+// b.appendChild(btnClearSave)
+
+// btnClearSave.addEventListener('click', () => {
+//   localStorage.setItem("area", '')
+// })
