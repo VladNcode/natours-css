@@ -3,3 +3,8 @@
     content: ""
     display: table
     clear: both
+
+@mixin makeXmark($y, $deg, $top)
+  transform: translateY($y) rotate($deg)
+  top: $top
+  background-color: $color-grey-dark-3
