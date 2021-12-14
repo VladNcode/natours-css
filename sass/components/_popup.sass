@@ -45,20 +45,43 @@
     opacity: 0
     transition: all .3s .2s
     transform: translate(-50%, -50%) scale(.25)
+    @include respond(phone)
+      display: block
+      height: auto
 
   &__left
     width: 33.333333%
     display: table-cell
+    @include respond(tab-port)
+      width: 40%
+    @include respond(phone)
+      display: block
+      width: 100%
 
   &__right
     width: 66.666666%
     display: table-cell
     vertical-align: middle
     padding: 3rem 5rem
+    @include respond(tab-port)
+      width: 60%
 
   &__img
     display: block
     width: 100%
+    @include respond(tab-port)
+      position: relative
+      margin-bottom: 2rem
+      top: 1.1rem
+      left: 2rem
+    @include respond(phone)
+      display: inline-block
+      height: 14.5rem
+      width: auto
+      top: 1rem
+      left: 5rem
+      margin-right: 2rem
+      margin-bottom: 0
 
   &__text
     font-size: 1.4rem
@@ -76,3 +99,7 @@
     -ms-hyphens: auto
     -webkit-hyphens: auto
     hyphens: auto
+
+    @include respond(tab-port)
+      column-count: 1
+      margin-bottom: 2rem
