@@ -473,9 +473,9 @@ body {
 @media (max-width: 56.25em) {
   .composition__photo--p2 {
     top: -2rem;
-    -webkit-transform: scale(1.2) rotate(0);
-            transform: scale(1.2) rotate(0);
-    border: 0.6rem solid #f7f7f7;
+    -webkit-transform: scale(1.3) rotate(0);
+            transform: scale(1.3) rotate(0);
+    border: 0.8rem solid #f7f7f7;
     z-index: 19;
   }
 }
@@ -492,7 +492,7 @@ body {
     left: 0;
     -webkit-transform: scale(1.2) rotate(5deg);
             transform: scale(1.2) rotate(5deg);
-    border: 0.6rem solid #f7f7f7;
+    border: 0.7rem solid #f7f7f7;
   }
 }
 
@@ -510,6 +510,7 @@ body {
   .composition__photo:hover {
     -webkit-transform: scale(1.3) translateY(-0.5rem);
             transform: scale(1.3) translateY(-0.5rem);
+    outline: 1rem solid #55c57a;
   }
 }
 
@@ -534,6 +535,12 @@ body {
           backface-visibility: hidden;
 }
 
+@media (max-width: 56.25em) {
+  .feature-box {
+    padding: 2rem;
+  }
+}
+
 .feature-box__icon {
   font-size: 6rem;
   margin-bottom: .5rem;
@@ -545,6 +552,7 @@ body {
   color: transparent;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  margin: 0;
 }
 
 .feature-box:hover {
@@ -716,6 +724,50 @@ body {
   font-weight: 100;
 }
 
+@media (max-width: 56.25em) {
+  .card {
+    height: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side {
+    height: auto;
+    position: relative;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .card__side--back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  .card:hover .card__side--front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .card__details {
+    padding: 3rem;
+  }
+  .card__cta {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    width: 100%;
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  .card__price-box {
+    margin-bottom: 3rem;
+  }
+  .card__price-value {
+    font-size: 6rem;
+  }
+}
+
 .row:not(last-child) {
   margin-bottom: 8rem;
 }
@@ -734,6 +786,21 @@ body {
           transform: skewX(-12deg);
 }
 
+@media (max-width: 56.25em) {
+  .story {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .story {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
+}
+
 .story__shape {
   position: relative;
   width: 15rem;
@@ -744,6 +811,13 @@ body {
   clip-path: circle(50% at 50% 50%);
   -webkit-transform: translateX(-3rem) skewX(12.1deg);
           transform: translateX(-3rem) skewX(12.1deg);
+}
+
+@media (max-width: 37.5em) {
+  .story__shape {
+    -webkit-transform: translateX(-3rem) skewX(0);
+            transform: translateX(-3rem) skewX(0);
+  }
 }
 
 .story__img {
@@ -761,6 +835,13 @@ body {
           transform: skewX(12deg) scale(1.00001);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+@media (max-width: 37.5em) {
+  .story__text {
+    -webkit-transform: skewX(0) scale(1.00001);
+            transform: skewX(0) scale(1.00001);
+  }
 }
 
 .story__caption {
@@ -830,6 +911,12 @@ body {
   transition: all .3s;
 }
 
+@media (max-width: 56.25em) {
+  .form__input {
+    width: 100%;
+  }
+}
+
 .form__input:focus {
   outline: none;
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -865,6 +952,13 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block;
+}
+
+@media (max-width: 56.25em) {
+  .form__radio-group {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 .form__radio-input {
@@ -1407,7 +1501,7 @@ body {
 
 @media (max-width: 56.25em) {
   .section-features {
-    padding: 15rem 0;
+    padding: 10rem 0;
   }
 }
 
@@ -1450,14 +1544,39 @@ body {
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
-  height: 50rem;
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 75em) {
+  .book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
+    background-size: cover;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .book {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../img/nat-10.jpg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat-10.jpg);
+  }
+}
+
 .book__form {
   width: 50%;
   padding: 6rem;
+}
+
+@media (max-width: 75em) {
+  .book__form {
+    width: 65%;
+  }
+}
+
+@media (max-width: 75em) {
+  .book__form {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
