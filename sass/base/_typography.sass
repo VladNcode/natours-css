@@ -63,6 +63,8 @@ body
   font-size: $default-font-size
   font-weight: 700
   text-transform: uppercase
+  @include respond(phone-small)
+    font-size: 1.2rem
 
 .heading-secondary-tab
   display: inline-block
@@ -77,6 +79,8 @@ body
   transition: all .2s
   @include respond(tab-port)
     font-size: 2.6rem
+  @include respond(phone-small)
+    font-size: 1.8rem
 
 .paragraph
   font-size: $default-font-size
